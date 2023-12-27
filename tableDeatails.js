@@ -1,0 +1,16 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+let id = urlParams.get("id");
+console.log(id);
+
+fetch(`https://fakestoreapi.com/products/${id}`)
+  .then((response) => response.json())
+  .then((product) => {
+    const descriptionContainer = document.getElementById(
+      "description-container"
+    );
+    descriptionContainer.innerHTML = `<p class="desParagraph">
+        ${product.description}</p> 
+        <img src="${product.image}" class="images"> `;
+  })
+  .catch((error) => console.error("Error fetching product details:", error));

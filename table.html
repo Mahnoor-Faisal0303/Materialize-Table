@@ -9,28 +9,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="table.css" />
+   
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
     />
+    <link rel="stylesheet" href="table.css" />
   </head>
   <body>
-    <h1>TABLE</h1>
-    <div class="container">
+    <div class="loader-container" id="loader" >
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="myContainer">
+      <h1>TABLE</h1>
       <table>
         <tr>
-          <th>Post ID</th>
           <th>ID</th>
-          <th>Name</th>
-          <th>email</th>
-          <th>Body</th>
+          <th>Title</th>
+          <th>Price</th>
         </tr>
         <tbody id="table-content"></tbody>
       </table>
     </div>
 
-    <script src="table.js"></script>
-    <!-- <script src="table2.js"></script> -->
+    <!-- <script src="table.js"></script> -->
+    <script src="table2.js"></script>
   </body>
 </html>
